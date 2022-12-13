@@ -15,6 +15,7 @@ public class Task {
         int n = bitNumber(i);
         System.out.println("Номер старшего значащего бита: " + n);
 
+
         // 3. Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1
         System.out.println("Кратные числу " + n + " в диапазоне от " + i + " до " + Short.MAX_VALUE);
         massive1(i, n);
@@ -28,8 +29,9 @@ public class Task {
     static int bitNumber(int i){
         int t = 1 << 17;
         while (i < t) t >>= 1;
-            double x = Math.log(t);
-        return (int) x;
+            int x = (int)(Math.log(t) / Math.log(2));
+            
+        return x;
     }
 
     static void massive1(int i, int n){
