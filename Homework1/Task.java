@@ -27,6 +27,8 @@ public class Task {
     }
 
     static int bitNumber(int i){
+        
+
         int t = 1 << 17;
         while (i < t) t >>= 1;
             int x = (int)(Math.log(t) / Math.log(2));
